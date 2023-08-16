@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d2675ca39a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font p-8">
+    <h2 class="text-3xl text-center mb-4">Basic Text Editor</h2>
+    <div class="border-2 border-black px-4 max-h-[80vh] h-[80vh]">
+      <div class="flex items-center justify-around mt-4">
+        <div class="left flex items-center gap-5">
+          <i id="bold" title="bold" class="fa-solid fa-bold cursor-pointer"></i>
+          <i
+            id="italic"
+            title="italic"
+            class="fa-solid fa-italic cursor-pointer"
+          ></i>
+          <i
+            id="underline"
+            title="underline"
+            class="fa-solid fa-underline cursor-pointer"
+          ></i>
+          <select id="fontFamilySelect" class="outline-0 border border-black">
+            <option value="Poppins">Poppins</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+        <div class="middle flex items-center gap-5">
+          <i
+            id="left"
+            title="aling left"
+            class="fa-solid fa-align-left cursor-pointer"
+          ></i>
+          <i
+            id="center"
+            title="aling center"
+            class="fa-solid fa-align-center cursor-pointer"
+          ></i>
+          <i
+            id="right"
+            title="aling right"
+            class="fa-solid fa-align-right cursor-pointer"
+          ></i>
+          <i
+            id="justify"
+            title="aling justify"
+            class="fa-solid fa-align-justify cursor-pointer"
+          ></i>
+        </div>
+        <div class="right flex items-center gap-5">
+          <select id="text-transform" class="outline-0 border border-black">
+            <option value="capitalize">Capitalize</option>
+            <option value="uppercase">Uppercase</option>
+            <option value="lowercase">Lowercase</option>
+            <option value="none">none</option>
+          </select>
+          <input class="w-[60px] p-2" type="number" value="16" id="font-size" />
+          <input class="cursor-pointer" type="color" name="" id="color" />
+        </div>
+      </div>
+      <hr class="border-black border my-4" />
+      <div>
+        <textarea
+          class="border-2 p-5 w-full h-[65vh] overflow-hidden border-black outline-o"
+          name=""
+          id="text-area"
+        ></textarea>
+      </div>
+      <div class="my-4">
+        <h4 class="text-4xl">
+          Total Word: <span id="word" class="font-medium">00</span>
+        </h4>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
