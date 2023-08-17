@@ -29,20 +29,32 @@ left.addEventListener('click', function(){
     const text_left = 'left';
     textArea.style.textAlign = text_left;
     left.classList.toggle('bg-lime-500')
+    center.classList.remove('bg-lime-500')
+    right.classList.remove('bg-lime-500')
+    justify.classList.remove('bg-lime-500')
 })
 center.addEventListener('click', function(){
     const text_center = 'center';
     textArea.style.textAlign = text_center;
     center.classList.toggle('bg-lime-500')
+    left.classList.remove('bg-lime-500')
+    right.classList.remove('bg-lime-500')
+    justify.classList.remove('bg-lime-500')
 })
 right.addEventListener('click', function(){
     const text_right = 'right';
     textArea.style.textAlign = text_right;
     right.classList.toggle('bg-lime-500')
+    left.classList.remove('bg-lime-500')
+    center.classList.remove('bg-lime-500')
+    justify.classList.remove('bg-lime-500')
 })
 justify.addEventListener('click', function(){
     textArea.style.textAlign = 'justify';
     justify.classList.toggle('bg-lime-500')
+    left.classList.remove('bg-lime-500')
+    center.classList.remove('bg-lime-500')
+    right.classList.remove('bg-lime-500')
 })
 textTransform.addEventListener('change', function(){
     const text_transform = textTransform.value;
@@ -66,7 +78,3 @@ fontFamily.addEventListener('change', function(){
     let word = alltext.length;
     document.getElementById('word').innerText = word;
   })
-
-  
-
-  

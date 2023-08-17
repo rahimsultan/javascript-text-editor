@@ -21,10 +21,10 @@
       }
     </style>
   </head>
-  <body class="font p-8">
+  <body class="font p-8 bg-lime-500">
     <h2 class="text-3xl text-center mb-4">Basic Text Editor</h2>
-    <div class="border-2 border-black px-4 max-h-[80vh] h-[80vh]">
-      <div class="flex items-center justify-around mt-4">
+    <div class="px-4 max-h-[80vh] h-[80vh]">
+      <div class="flex items-center justify-around py-4 bg-white rounded">
         <div class="left flex items-center gap-5">
           <i
             id="bold"
@@ -54,22 +54,22 @@
           <i
             id="left"
             title="aling left"
-            class="fa-solid fa-align-left cursor-pointer p-1 rounded"
+            class="fa-solid fa-align-left cursor-pointer p-1 rounded same"
           ></i>
           <i
             id="center"
             title="aling center"
-            class="fa-solid fa-align-center cursor-pointer p-1 rounded"
+            class="fa-solid fa-align-center cursor-pointer p-1 rounded same"
           ></i>
           <i
             id="right"
             title="aling right"
-            class="fa-solid fa-align-right cursor-pointer p-1 rounded"
+            class="fa-solid fa-align-right cursor-pointer p-1 rounded same"
           ></i>
           <i
             id="justify"
             title="aling justify"
-            class="fa-solid fa-align-justify cursor-pointer p-1 rounded"
+            class="fa-solid fa-align-justify cursor-pointer p-1 rounded same"
           ></i>
         </div>
         <div class="right flex items-center gap-5">
@@ -84,18 +84,16 @@
         </div>
       </div>
       <hr class="border-black border my-4" />
-      <div>
+      <div class="overflow-hidden">
         <textarea
-          class="border-2 p-5 w-full h-[65vh] overflow-hidden border-black outline-o"
+          class="border-2 p-5 w-full h-[65vh] border-black outline-o"
           name=""
           id="text-area"
         ></textarea>
       </div>
-      <div class="my-4">
-        <h4 class="text-4xl">
-          Total Word: <span id="word" class="font-medium">00</span>
-        </h4>
-      </div>
+      <h4 class="text-4xl">
+        Total Word: <span id="word" class="font-medium">00</span>
+      </h4>
     </div>
     <script src="app.js"></script>
   </body>
